@@ -217,7 +217,17 @@ class ProjectManager extends Instructor {
       + This method, when called, will check the grade of the student and see if they're ready to graduate from Lambda School
       + If the student's grade is above a 70% let them graduate! Otherwise go back to grading their assignments to increase their score.
 */
-
+class Stretch extends Student {
+  constructor(attributes) {
+    super(attributes)
+    this.grade = Math.random(Math.round() * 100)
+  }
+  graduate() {
+    if(this.grade >= 70) {
+      return `${this.name} made a ${this.grade} in my class.`
+    }
+  }
+}
 
 //End of Challenge
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
